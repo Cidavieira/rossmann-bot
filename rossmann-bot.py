@@ -6,6 +6,7 @@ from flask import Flask,request,Response
 
 #constants
 TOKEN='6044419406:AAEZxSHwiV7bmNW5X7mpGTYpb6mQiB46JHA'
+chat_id='6054924276'
 
 #Info about the Bot
 #http://api.telegram.org/bot6044419406:AAEZxSHwiV7bmNW5X7mpGTYpb6mQiB46JHA/getMe
