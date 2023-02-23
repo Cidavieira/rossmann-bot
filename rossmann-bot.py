@@ -14,7 +14,7 @@ TOKEN='6044419406:AAEZxSHwiV7bmNW5X7mpGTYpb6mQiB46JHA'
 #http://api.telegram.org/bot6044419406:AAEZxSHwiV7bmNW5X7mpGTYpb6mQiB46JHA/getUpdates
 
 #webhook
-#http://api.telegram.org/bot6044419406:AAEZxSHwiV7bmNW5X7mpGTYpb6mQiB46JHA/setWebhook?url=httpps://cida@ssh.localhost.run:
+http://api.telegram.org/bot6044419406:AAEZxSHwiV7bmNW5X7mpGTYpb6mQiB46JHA/setWebhook?url=https://api.render.com/deploy/srv-cfrtnrhmbjssk6r5kjc0?key=zRZRpIOBHxA
 
 #send message
 #http://api.telegram.org/bot6044419406:AAEZxSHwiV7bmNW5X7mpGTYpb6mQiB46JHA/sendMessage?chat_id=6054924276&text=Hi Cida, I am doing well,tks!
