@@ -86,8 +86,8 @@ def parse_message(message):
 
 app= Flask(__name__)
 
-@#app.route('/',methods=['GET','POST'])
-@app.route('/rossman/predict',methods=['GET','POST'])
+@app.route('/',methods=['GET','POST'])
+
 
 
 def index():
@@ -120,5 +120,6 @@ def index():
         return '<h1> RossmannTelegram BOT </h1>'
 if __name__=='__main__':
     port=os.environ.get('PORT',5000)
-    app.run(host='10.0.0.102', port=port)
+    app.run(host='0.0.0.0',port=port)
+    #app.run(host='10.0.0.102', port=port)
 
