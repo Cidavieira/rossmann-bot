@@ -22,11 +22,11 @@ TOKEN='6044419406:AAEZxSHwiV7bmNW5X7mpGTYpb6mQiB46JHA'
 
 
 def send_message(chat_id,text):
-    url='https://api.telegram.org/bot{}/'.format(TOKEN)
-    url=url +'sendMessage?chat_id={}'.format(chat_id)
+    url=f'https://api.telegram.org/bot{TOKEN}/'
+    url=url +f"sendMessage?chat_id={chat_id}"
     #url='https://api.telegram.org/bot6044419406:AAEZxSHwiV7bmNW5X7mpGTYpb6mQiB46JHA/sendMessage?chat_id=6054924276'
     r=requests.post(url,json={'text':text})
-    print('Status Code {}'.format(r.status_code))
+    print(f'Status Code {r.status_code}')
 
     return None
 
@@ -46,8 +46,8 @@ def load_dataset(store_id):
 
     if not df_test.empty:
         # remove closed days
-        df_test = df_test[df_test['Open'] != 0]
-        df_test = df_test[~df_test['Open'].isnull()]
+        df_test = df_test[df_test['Open'] == 1]
+        #df_test = df_test[~df_test['Open'].isnull()]
         df_test = df_test.drop( 'Id', axis=1 )
 
         # convert Dataframe to json
@@ -64,7 +64,7 @@ def predict(data):
     data=data
 
     r=requests.post(url,data=data,headers=header)
-    print('status code{}'.format(r.status_code))
+    print(f'status code{r.status_code}')
     d1 = pd.DataFrame( r.json(), columns=r.json()[0].keys() )
     return d1
 
