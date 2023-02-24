@@ -22,8 +22,8 @@ TOKEN='6044419406:AAEZxSHwiV7bmNW5X7mpGTYpb6mQiB46JHA'
 
 
 def send_message(chat_id,text):
-    url= f'https://api.telegram.org/bot{}/'.format(TOKEN)
-    url=url + f'sendMessage?chat_id={}'.format(chat_id)
+    url='https://api.telegram.org/bot{}/'.format(TOKEN)
+    url=url +'sendMessage?chat_id={}'.format(chat_id)
     #url='https://api.telegram.org/bot6044419406:AAEZxSHwiV7bmNW5X7mpGTYpb6mQiB46JHA/sendMessage?chat_id=6054924276'
     r=requests.post(url,json={'text':text})
     print('Status Code {}'.format(r.status_code))
@@ -118,6 +118,7 @@ def index():
             return Response('ok',status=200)
     else:
         return '<h1> RossmannTelegram BOT </h1>'
+    
 if __name__=='__main__':
     port=os.environ.get('PORT',5000)
     app.run(host='0.0.0.0',port=port)
