@@ -14,8 +14,10 @@ TOKEN='6044419406:AAEZxSHwiV7bmNW5X7mpGTYpb6mQiB46JHA'
 #get updates
 #http://api.telegram.org/bot6044419406:AAEZxSHwiV7bmNW5X7mpGTYpb6mQiB46JHA/getUpdates
 
-#webhook
-#http://api.telegram.org/bot6044419406:AAEZxSHwiV7bmNW5X7mpGTYpb6mQiB46JHA/setWebhook?url=https://api.render.com/deploy/srv-cfrtnrhmbjssk6r5kjc0?key=zRZRpIOBHxA
+#webhook importante deletar e criar um novo com endereço do deploy
+#http://api.telegram.org/bot6044419406:AAEZxSHwiV7bmNW5X7mpGTYpb6mQiB46JHA/deleteWebhook?
+#http://api.telegram.org/bot6044419406:AAEZxSHwiV7bmNW5X7mpGTYpb6mQiB46JHA/setWebhook?url=https://rossmann-bot-y16i.onrender.com
+
 
 #send message
 #http://api.telegram.org/bot6044419406:AAEZxSHwiV7bmNW5X7mpGTYpb6mQiB46JHA/sendMessage?chat_id=6054924276&text=Hi Cida, I am doing well,tks!
@@ -32,8 +34,6 @@ def send_message(chat_id,text):
 
 def load_dataset(store_id):
     # loading test dataset
-    #df10 = pd.read_csv( '\\Users\\Cida\\Curso_DsEmProd\\dataset\\test.csv' )
-    #df_store_raw = pd.read_csv( '\\Users\\Cida\\Curso_DsEmProd\\dataset\\store.csv' )
     df10 = pd.read_csv( 'test.csv' )
     df_store_raw = pd.read_csv( 'store.csv' )
 
@@ -122,5 +122,5 @@ def index():
 if __name__=='__main__':
     port=os.environ.get('PORT',5000)
     app.run(host='0.0.0.0',port=port)
-    #app.run(host='10.0.0.102', port=port)
+  
 
